@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9636a999-c591-43f2-8878-84b670a53577">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="64"/>
+	<queryString language="SQL">
+		<![CDATA[Select * From pedro_joyarieb]]>
+	</queryString>
+	<field name="nik" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sex" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="keahlian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_gajian" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji_pokok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tj_keluarga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tj_keahlian" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jam_lembur" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="upah_lembur" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bpjs" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pph" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gaji_bersih" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="totalgajipokok" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{gaji_pokok}]]></variableExpression>
+	</variable>
+	<variable name="totallembur" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{upah_lembur}]]></variableExpression>
+	</variable>
+	<variable name="total_Tjkel" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{tj_keluarga}]]></variableExpression>
+	</variable>
+	<variable name="tot_tjkea" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{tj_keahlian}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="151" y="0" width="251" height="33" uuid="c0d2f326-d983-479e-9d58-bee3e444c225"/>
+				<textElement textAlignment="Justified">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Gaji Karyawan]]></text>
+			</staticText>
+			<line>
+				<reportElement x="151" y="33" width="251" height="1" uuid="069cee90-63ee-486b-befd-51e952dc3847"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="33" uuid="674da3db-2ec9-45e1-9501-6ee3bae9dd22"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="37" height="34" uuid="59ea200e-4405-4da3-9caf-18c6d4149350"/>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="0" width="37" height="34" uuid="d9bd69b9-c9f7-41da-9873-6888cd4b6c95"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="0" width="23" height="34" uuid="10e5e639-c9ea-48eb-811b-ea13164003fa"/>
+				<text><![CDATA[Sex]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="38" height="34" uuid="09a58a22-3ad8-49c4-ba1e-fd468f4aa4bd"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="0" width="49" height="34" uuid="ff9646f3-8bce-4eca-9578-eb2acbe49af8"/>
+				<text><![CDATA[TGL Gajian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="54" height="34" uuid="1744bd23-853a-4ec9-ad3a-3678e1a57e43"/>
+				<text><![CDATA[Gaji Pokok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="56" height="34" uuid="9401dd4c-31e4-457b-8653-289276f0984f"/>
+				<text><![CDATA[TJ Keluarga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="52" height="34" uuid="3073970e-4b67-4fa9-9f6c-8039e0b33156"/>
+				<text><![CDATA[TJ Keahlian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="0" width="57" height="34" uuid="20373de5-a6cd-4c22-be67-b24c8856adc2"/>
+				<text><![CDATA[Jam Lembur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="0" width="28" height="34" uuid="7d44bd83-7491-41a1-83e4-35fc33867293"/>
+				<text><![CDATA[BPJS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="1" width="43" height="34" uuid="4384c7ea-ccff-42da-af6b-0cba1308d26d"/>
+				<text><![CDATA[Keahlian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="1" width="27" height="34" uuid="ae0d6f62-b581-407a-b38a-df935cec78d1"/>
+				<text><![CDATA[PPh 21]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="1" width="58" height="34" uuid="0bb584a6-9150-4a44-9a12-b7c0e3bbea17"/>
+				<text><![CDATA[Gaji Bersih]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="34" uuid="6012a4fe-5424-4310-999a-7a1b3c7b4480"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="37" height="34" uuid="269e8c5a-63cb-4b80-bccc-6667c2f3df78"/>
+				<textFieldExpression><![CDATA[$F{nik}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="0" width="37" height="34" uuid="0c3b20a2-8a07-4f5c-af90-a98bfb93e965"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="0" width="23" height="34" uuid="e9ab7aa0-a0b1-4977-9640-a34316c73ef9"/>
+				<textFieldExpression><![CDATA[$F{sex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="38" height="34" uuid="cf876ea8-2b14-43ab-bd23-978de48969c8"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="49" height="34" uuid="88684f51-0172-4456-935d-71fb303d87c0"/>
+				<textFieldExpression><![CDATA[$F{tgl_gajian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="54" height="34" uuid="72c55dc9-d04d-4b71-a85f-399323030abd"/>
+				<textFieldExpression><![CDATA[$F{gaji_pokok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="277" y="0" width="56" height="34" uuid="f20754fe-5162-4128-a829-a70cdd5df3b1"/>
+				<textFieldExpression><![CDATA[$F{tj_keluarga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="52" height="34" uuid="0a32fad2-52e8-424b-81cf-ce67d2695a88"/>
+				<textFieldExpression><![CDATA[$F{tj_keahlian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="0" width="57" height="34" uuid="595da84f-5471-489b-8269-6ffa030b0545"/>
+				<textFieldExpression><![CDATA[$F{jam_lembur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="28" height="34" uuid="62e6f1e5-b25e-4509-9b50-d714e575832c"/>
+				<textFieldExpression><![CDATA[$F{bpjs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="43" height="34" uuid="35d9e095-0b6d-4f1f-8b27-dd6765ef6c74"/>
+				<textFieldExpression><![CDATA[$F{keahlian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="27" height="34" uuid="880810e5-ffc0-4e74-9c69-87e640ed5d53"/>
+				<textFieldExpression><![CDATA[$F{pph}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="0" width="58" height="34" uuid="4328a39d-7888-4946-ad2e-fcd99b948f34"/>
+				<textFieldExpression><![CDATA[$F{gaji_bersih}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="0" width="80" height="20" uuid="45921921-6496-4592-8f4f-fb2384b4cb9e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="a2c8ce8b-fcd6-40c0-911c-dab505d7af2e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="184" splitType="Stretch">
+			<staticText>
+				<reportElement x="395" y="85" width="60" height="20" uuid="0e27f6cc-1d95-4432-bc9c-fcf5f29a0cb1"/>
+				<text><![CDATA[Pekanbaru,]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="85" width="100" height="20" uuid="44adeb0f-4f95-4eef-bed6-0c45de9c2678"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="142" width="73" height="20" uuid="ed18baab-09d8-4a01-960d-8d07f8ccf0cd"/>
+				<text><![CDATA[Pedro Joyarieb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="162" width="73" height="20" uuid="276bfdbc-c6b6-44f5-8ecd-99c11cae6472"/>
+				<text><![CDATA[Manager Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="20" width="70" height="20" uuid="388a852a-5bc9-44ed-93ef-27ea67d6c030"/>
+				<text><![CDATA[Total Lembur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="40" width="122" height="20" uuid="2d6c6a4d-3cac-41e8-a56c-a91f53218745"/>
+				<text><![CDATA[Total Tunjangan Keluarga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="60" width="122" height="20" uuid="dba65fc0-9735-42ef-b4c6-935219237249"/>
+				<text><![CDATA[Total Tunjangan Keahlian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="0" width="77" height="20" uuid="9f140b67-f98a-44b7-a3e4-9dcff80cc13d"/>
+				<text><![CDATA[Total Gaji Pokok]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="cf4ad657-ca98-4220-b641-4fc0304730f8"/>
+				<textFieldExpression><![CDATA[$V{totalgajipokok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="20" width="100" height="20" uuid="c867beef-bfd7-4f7c-ad4b-e95951ff99d7"/>
+				<textFieldExpression><![CDATA[$V{totallembur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="40" width="100" height="20" uuid="cf43353e-cd14-48a2-8ad7-581699bbac77"/>
+				<textFieldExpression><![CDATA[$V{total_Tjkel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="60" width="100" height="20" uuid="35d5ba6f-4019-405d-8867-cb5cb405de6f"/>
+				<textFieldExpression><![CDATA[$V{tot_tjkea}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
